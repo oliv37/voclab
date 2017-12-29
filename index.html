@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Voc Lab</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse bg-inverse fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">VocLab</a>
+        </div>
+    </nav>
+
+    <div class="container"></div>
+
+    <script id="vocabTemplate" type="x-tmpl-mustache">
+        {{#words}}
+        <div class="word">
+            <h4>{{value}}</h4>
+            <p>{{translation}}</p>
+        </div>
+        {{/words}}
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script>
+        $.get("/api/vocab.json", function (data) {
+            var template = $('#vocabTemplate').html();
+            // Mustache.parse(template);   // optional, speeds up future uses
+            var rendered = Mustache.render(template, {
+                words: data
+            });
+            $('body > .container').html(rendered);
+        });
+    </script>
+</body>
+
+</html>
