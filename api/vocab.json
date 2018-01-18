@@ -22,4 +22,21 @@
 }, {
     "value": "agnostique",
     "translation": "Qui pense que Dieu est inconnaissable, qui ne prétend pas connaître les secrets de l’Univers."
+}, {
+    "value": "oxymore",
+    "translation": "Figure de style par laquelle on allie deux termes qui semblent se contredire.",
+    "exemple": "un silence éloquent, une obscure clarté"
+}, {
+    "value": "ignare",
+    "translation": "Qui est scandaleusement ignorant, sans culture ni instruction."
+}, {
+    "value": "ésotérique",
+    "translation": "Compréhensible seulement pour les initiés."
+}, {
+    "value": "pléonasme",
+    "translation": "Répétition de termes ou expressions ayant le même sens.",
+    "exemple": "un grand géant"
+}, {
+    "value": "dédain",
+    "translation": "Sorte de mépris qu'on exprime par l'air, le ton et les manières."
 }]
