@@ -36,10 +36,12 @@
     <script>
         $.get("api/vocab.json", function (data) {
             var template = $('#vocabTemplate').html();
-            // Mustache.parse(template);   // optional, speeds up future uses
+            Mustache.parse(template);
+
             var rendered = Mustache.render(template, {
                 words: data
             });
+
             $('body > .container').html(rendered);
         });
     </script>
