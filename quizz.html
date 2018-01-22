@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Quizz</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        input.form-control {
+            border: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, .15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse bg-inverse fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">VocLab</a>
+        </div>
+    </nav>
+
+    <div class="container" style="display:none;padding-top: 40px;">
+        <p class="blockquote"></p>
+        <input type="text" id="answer" class="form-control" />
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script>
+        (function () {
+
+            function shuffle(a) {
+                var j, x, i;
+                for (i = a.length - 1; i > 0; i--) {
+                    j = Math.floor(Math.random() * (i + 1));
+                    x = a[i];
+                    a[i] = a[j];
+                    a[j] = x;
+                }
+            }
+
+            function resetInput() {
+                $('#answer').val('');
+            }
+
+            function displayVocab(voc) {
+                $('p').text(voc.translation)
+            }
+
+            function startQuizz(vocab) {
+                var limit = vocab.length;
+                var index = 0;
+
+                shuffle(vocab);
+
+                displayVocab(vocab[index]);
+                $('.container').css('display', 'block');
+
+                $('#answer').on('input', function () {
+                    var answer = $(this).val();
+
+                    if (answer === vocab[index]['value']) {
+                        index = (index + 1) % limit;
+                        displayVocab(vocab[index]);
+                        resetInput();
+                    }
+                });
+            }
+
+            $.get("api/vocab.json", startQuizz);
+        })();
+    </script>
+</body>
+
+</html>
