@@ -18,6 +18,8 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">VocLab</a>
             <a class="navbar-brand" href="quizz.html">Quizz</a>
+
+            <span class="navbar-brand word-count"></span>
         </div>
     </nav>
 
@@ -44,6 +46,7 @@
             });
 
             $('body > .container').html(rendered);
+            $('.navbar .word-count').html(data.length);
         });
     </script>
 </body>

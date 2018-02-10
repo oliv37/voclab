@@ -6,3 +6,8 @@ body {
     padding: 25px 0;
     border-bottom: 1px solid #E0E0E0;
 }
+
+nav .word-count {
+    float: right;
+    font-weight: bold;
+}
