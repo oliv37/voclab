@@ -38,6 +38,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script>
         $.get("api/vocab.json", function (data) {
+            function stripAccents(str) {
+                return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+            }
+
+            data.sort(function(a, b) {
+                var valueA = stripAccents(a.value);
+                var valueB = stripAccents(b.value);
+
+                if(valueA < valueB) return -1;
+                if(valueA > valueB) return 1;
+                return 0;
+            });
+
             var template = $('#vocabTemplate').html();
             Mustache.parse(template);
 
