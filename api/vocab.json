@@ -1,42 +1,178 @@
 [{
-    "value": "philanthrope",
+    "value": "Philanthrope",
     "translation": "Personne qui a pour but d'améliorer la vie de ses semblables. Personne généreuse et désintéressée."
 }, {
-    "value": "misanthrope",
+    "value": "Pisanthrope",
     "translation": "Qui a une opinion défavorable du genre humain."
 }, {
-    "value": "liturgie",
+    "value": "Liturgie",
     "translation": "Ensemble des rites, cérémonies et prières dédiés au culte d'une divinité religieuse."
 }, {
-    "value": "exhumer",
+    "value": "Exhumer",
     "translation": "Tirer un cadavre de sa sépulture, Tirer quelque chose de l'oubli"
 }, {
-    "value": "minauder",
+    "value": "Minauder",
     "translation": "Faire des mines, prendre des manières affectées pour se rendre agréable."
 }, {
-    "value": "ostensible",
+    "value": "Ostensible",
     "translation": "Que l'on ne cache pas, qui est fait avec l'intention d'être vu."
 }, {
-    "value": "ineptie",
+    "value": "Ineptie",
     "translation": "Action ou parole stupide."
 }, {
-    "value": "agnostique",
+    "value": "Agnostique",
     "translation": "Qui pense que Dieu est inconnaissable, qui ne prétend pas connaître les secrets de l’Univers."
 }, {
-    "value": "oxymore",
+    "value": "Oxymore",
     "translation": "Figure de style par laquelle on allie deux termes qui semblent se contredire.",
     "exemple": "un silence éloquent, une obscure clarté"
 }, {
-    "value": "ignare",
+    "value": "Ignare",
     "translation": "Qui est scandaleusement ignorant, sans culture ni instruction."
 }, {
-    "value": "ésotérique",
+    "value": "Ésotérique",
     "translation": "Compréhensible seulement pour les initiés."
 }, {
-    "value": "pléonasme",
+    "value": "Pléonasme",
     "translation": "Répétition de termes ou expressions ayant le même sens.",
-    "exemple": "un grand géant"
+    "exemple": "Un grand géant."
 }, {
-    "value": "dédain",
+    "value": "Dédain",
     "translation": "Sorte de mépris qu'on exprime par l'air, le ton et les manières."
+}, {
+    "value": "Viscéral",
+    "translation": "Provenant du fond de soi-même, instinctif."
+}, {
+    "value": "Antipathie",
+    "translation": "Répugnance naturelle et non raisonée pour quelqu'un ou quelque chose."
+}, {
+    "value": "Aversion",
+    "translation": "Sentiment de dégoût, de répulsion à l'égard d'une personne ou de quelque chose."
+}, {
+    "value": "Complaisance",
+    "translation": "Disposition à accepter et se conformer aux sentiments, aux volontés d'autrui. / Indulgence vis-à-vis d'autrui. / Contentement de soi, autosatisfaction."
+}, {
+    "value": "Euphémisme",
+    "translation": "Figure de style basée sur l'atténuation d'un mot, d'une expression qui serait trop choquante.",
+    "exemple": "« Être diminué » pour signifier « être handicapé »."
+}, {
+    "value": "Dithyrambique",
+    "translation": "Très élogieux."
+}, {
+    "value": "Symbiose",
+    "translation": "Association biologique durable et réciproque entre deux ou plusieurs organismes vivants."
+}, {
+    "value": "Velléité",
+    "translation": "Intention de faire quelque chose qui n'est finalement pas mise en pratique."
+}, {
+    "value": "Calomnie",
+    "translation": "Accusation mensongère portant atteinte à l'honneur de quelqu'un."
+}, {
+    "value": "Abjecte",
+    "translation": "Ignoble, méprisable."
+}, {
+    "value": "Véreux",
+    "translation": "Malhonnête."
+}, {
+    "value": "Insipide",
+    "translation": "Fade, sans saveur, sans goût. Peut s'employer de manière figurée pour parler d'une chose ou d'une personne inintéressante."
+}, {
+    "value": "Dérision",
+    "translation": "Mépris qui incite à rire, à se moquer de (qqn, qqch.)."
+}, {
+    "value": "Subversif",
+    "translation": "Qui tend à menacer, à provoquer ou à renverser l'ordre établi. (Synonyme de perturbateur)"
+}, {
+    "value": "Éclectique",
+    "translation": "Qui est ouvert à plusieurs tendances.",
+    "exemple": "Une architecture éclectique qui mêle plusieurs styles architecturaux."
+}, {
+    "value": "Anhédonie",
+    "translation": "Insensibilité au plaisir."
+}, {
+    "value": "Pléthorique",
+    "translation": "En grande abondance, en grande quantité, de façon démesurée, beaucoup trop."
+}, {
+    "value": "Onirique",
+    "translation": "Relatif aux rêves. Qui rappelle, évoque le rêve. Qui est inspiré par le rêve. (Synonyme d'imaginaire)."
+}, {
+    "value": "Aliénation",
+    "translation": "Transmission, cession d'un bien ou d'un droit à autrui. / Situation de quelqu'un qui est dépossédé de ce qui constitue son être essentiel, sa raison d'être, de vivre."
+}, {
+    "value": "Allégorie",
+    "translation": "La signification étymologique est : « une autre manière de dire ». Figure de style qui permet de mieux comprendre un concept, une idée grâce à une histoire, une métaphore ou une image."
+}, {
+    "value": "Rhétorique",
+    "translation": "Sorte de mépris qu'on exprime par l'air, le ton et les manières."
+}, {
+    "value": "Mutisme",
+    "translation": "Refus de parler."
+}, {
+    "value": "Apathie",
+    "translation": "Incapacité d'être ému ou de réagir."
+}, {
+    "value": "Empathie",
+    "translation": "Capacité de s'identifier à autrui dans ce qu'il ressent."
+}, {
+    "value": "Amertume",
+    "translation": "Saveur amère. / Ressentiment causé par le regret ou la déception."
+}, {
+    "value": "Odieux",
+    "translation": "Qui est méchant. / Qui est désagréable, insupportable."
+}, {
+    "value": "Erratique",
+    "translation": "Instable, sans cohérence, qui n'est pas fixé, qui bouge, qui varie, qui erre.",
+    "exemple": "Un comportement erratique, une douleur erratique, une conduite erratique."
+}, {
+    "value": "Prosélytiste",
+    "translation": "Désigne l'attitude des personnes qui cherchent à « susciter l'adhésion » d'un public, public susceptible de devenir alors nouvel adhérent à leur foi."
+}, {
+    "value": "Déontologie",
+    "translation": "Ensemble des règles et des devoirs régissant une profession."
+}, {
+    "value": "Avidité",
+    "translation": "Désir ardent et immodéré."
+}, {
+    "value": "Cupidité",
+    "translation": "Désir excessif du gain, de l'argent."
+}, {
+    "value": "Antagonisme",
+    "translation": "État d'opposition, de rivalité, de lutte entre deux puissances qui s'affrontent. (Duel)"
+}, {
+    "value": "Opprimer",
+    "translation": "Imposer une autorité excessive et violente à une personne, un peuple."
+}, {
+    "value": "Hypocrisie",
+    "translation": "Comportement par lequel on exprime des sentiments, des opinions que l'on n'a pas, que l'on n'approuve pas."
+}, {
+    "value": "Fatuité",
+    "translation": "Contentement excessif de soi qui se manifeste par une vanité insolente."
+}, {
+    "value": "Mépriser",
+    "translation": "Estimer indigne d'attention ou d'intérêt (s'oppose à estimer)."
+}, {
+    "value": "Ironie",
+    "translation": "Raillerie qui consiste à dire le contraire de ce que l'on souhaite faire entendre.",
+    "exemple": "« Quelle belle journée ! » pour signifier qu'il pleut des cordes."
+}, {
+    "value": "Polysémie",
+    "translation": "Fait, pour un mot, d'avoir plusieurs sens."
+}, {
+    "value": "Rhétorique",
+    "translation": "Ensemble de procédés constituant l'art du bien-dire, de l'éloquence."
+}, {
+    "value": "Éloquence",
+    "translation": "Art, talent de bien parler, de persuader et de convaincre par la parole."
+}, {
+    "value": "Ethique",
+    "translation": "Concernant la morale. Qui respecte certaines valeurs."
+}, {
+    "value": "Vanité",
+    "translation": "Satisfaction de soi-même, sentiment d'orgueil."
+}, {
+    "value": "Vaniteux",
+    "translation": "Qui s'admire soi-même et demande l'admiration des autres pour ses qualités réelles ou supposées."
+}, {
+    "value": "Orgueil",
+    "translation": "Qui s'admire soi-même et demande l'admiration des autres pour ses qualités réelles ou supposées."
 }]
