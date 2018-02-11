@@ -8,6 +8,7 @@ body {
 }
 
 nav .word-count {
-    float: right;
+    position: absolute;
+    right: 30px;
     font-weight: bold;
 }
