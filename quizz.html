@@ -26,16 +26,29 @@
             <a class="navbar-brand" href="quizz.html">Quizz</a>
         </div>
     </nav>
+    <div class="top-bar"></div>
+    <div class="quizz-container container" style="padding-top: 40px;"></div>
 
-    <div class="container" style="display:none;padding-top: 40px;">
-        <p class="blockquote"></p>
-        <input type="text" id="answer" class="form-control" />
-    </div>
+    <script id="quizzTemplate" type="x-tmpl-mustache">
+        <p class="blockquote">{{translation}}</p>
+        <br/>
+        <div class="row">
+            {{#answers}}
+                <div class="col">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">{{.}}</button>
+                </div>
+            {{/answers}}
+        </div>
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script>
         (function () {
+            var template = $('#quizzTemplate').html();
+            var index = 0, transitionDuration = 1500, vocab, currentVocab;
+
+            Mustache.parse(template);
 
             function shuffle(a) {
                 var j, x, i;
@@ -45,35 +58,70 @@
                     a[i] = a[j];
                     a[j] = x;
                 }
+
+                return a;
             }
 
-            function resetInput() {
-                $('#answer').val('');
+            function initQuizzProperties(data) {
+                vocab = shuffle(data);
+                currentVocab = vocab[index];
             }
 
-            function displayVocab(voc) {
-                $('p').text(voc.translation)
+            function generateAnswers(answers) {
+                if(vocab.length < 4) return [currentVocab.value];
+                if(!answers) return generateAnswers([currentVocab.value])
+                if(!answers.length) return generateAnswers([currentVocab.value])
+                if(answers.length === 4) return shuffle(answers);
+
+                var randomAnswer = vocab[Math.floor(Math.random() * vocab.length)]['value'];
+                var isNotAlreadyInTheAnswers = answers.indexOf(randomAnswer) === -1;
+
+                return isNotAlreadyInTheAnswers 
+                    ? generateAnswers(answers.concat([randomAnswer]))
+                    : generateAnswers(answers);
             }
 
-            function startQuizz(vocab) {
-                var limit = vocab.length;
-                var index = 0;
+            function isGoodAnswer(answer) {
+                return currentVocab.value === answer;
+            }
 
-                shuffle(vocab);
-
-                displayVocab(vocab[index]);
-                $('.container').css('display', 'block');
-
-                $('#answer').on('input', function () {
-                    var answer = $(this).val();
-
-                    if (answer && answer.toLowerCase() === vocab[index]['value'].toLowerCase()) {
-                        index = (index + 1) % limit;
-                        displayVocab(vocab[index]);
-                        resetInput();
-                    }
+            function displayCurrentVocab() {
+                var rendered = Mustache.render(template, {
+                    translation: currentVocab.translation,
+                    answers: generateAnswers()
                 });
+
+                 $('body > .container').html(rendered);
             }
+
+            function resetTopBar() {
+                $('.top-bar').css('width', '0');
+            }
+            
+            function selectAndDisplayNextVocab() {
+                index = (index + 1) % vocab.length;
+                currentVocab = vocab[index];
+                displayCurrentVocab();
+            }
+
+            function startQuizz(data) {
+                initQuizzProperties(data);
+                displayCurrentVocab();
+                $('.container').css('display', 'block');
+            }
+
+            $('body').on('click', 'button', function() {
+                var elem = $(this); 
+
+                if (isGoodAnswer(elem.html())) {
+                    elem.addClass('btn-success');
+                    $('button').prop('disabled', true);
+                    $('.top-bar').animate({'width': '100%'}, transitionDuration, resetTopBar);
+                    setTimeout(selectAndDisplayNextVocab, transitionDuration);
+                } else {
+                    elem.addClass('btn-danger');
+                }
+            });
 
             $.get("api/vocab.json", startQuizz);
         })();

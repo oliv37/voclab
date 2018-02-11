@@ -12,3 +12,24 @@ nav .word-count {
     right: 30px;
     font-weight: bold;
 }
+
+.quizz-container {
+    padding-top: 40px;
+}
+
+.quizz-container .col {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.quizz-container button {
+    cursor: pointer;
+    white-space: normal;
+    height: 100%;
+}
+
+.top-bar {
+    height: 2px;
+    width: 0;
+    background-color: #0275d8;
+}
