@@ -77,7 +77,7 @@
                 var isNotAlreadyInTheAnswers = answers.indexOf(randomAnswer) === -1;
 
                 return isNotAlreadyInTheAnswers 
-                    ? generateAnswers(answers.concat([randomAnswer]))
+                    ? generateAnswers(shuffle(answers).concat([randomAnswer]))
                     : generateAnswers(answers);
             }
 
