@@ -11,6 +11,8 @@ nav .word-count {
     position: absolute;
     right: 30px;
     font-weight: bold;
+    color: #fff;
+    font-size: 1.1em;
 }
 
 .quizz-container {
