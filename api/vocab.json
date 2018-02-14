@@ -68,8 +68,8 @@
     "value": "Calomnie",
     "translation": "Accusation mensongère portant atteinte à l'honneur de quelqu'un."
 }, {
-    "value": "Abjecte",
-    "translation": "Ignoble, méprisable."
+    "value": "Abject",
+    "translation": "Ignoble, méprisable, qui inspire le dégoût."
 }, {
     "value": "Véreux",
     "translation": "Malhonnête."
@@ -286,5 +286,23 @@
 }, {
     "value": "Sarcasme",
     "translation": "Moquerie ironique et méchante."
+}, {
+    "value": "Arrimer",
+    "translation": "Disposer et fixer solidement avec des liens le chargement d'un navire, d'un avion, d'un véhicule."
+}, {
+    "value": "Litanie",
+    "translation": "Enumération longue et particulièrement ennuyeuse."
+}, {
+    "value": "Antipathique",
+    "translation": "Désagraéble, déplaisant."
+}, {
+    "value": "Grotesque",
+    "translation": "Qui est ridicule, extravagant ou absurde de par son comportement ou son apparence."
+}, {
+    "value": "Animosité",
+    "translation": "Sentiment de malveillance, désir de nuire à quelqu'un."
+}, {
+    "value": "Adjonction",
+    "translation": "Action d'associer une personne ou une chose à une autre."
 }
 ]
